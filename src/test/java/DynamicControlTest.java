@@ -29,9 +29,7 @@ public class DynamicControlTest {
         options.addArguments("--disable-infobars");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-    }
-
+        driver.manage().window().maximize(); }
     @Test
     public void checkDynamicControl() {
         driver.get("https://the-internet.herokuapp.com/dynamic_controls");
@@ -56,5 +54,4 @@ public class DynamicControlTest {
     public void close() {
         driver.quit();
     }
-
 }

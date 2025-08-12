@@ -31,10 +31,10 @@ public class ContextTest {
         options.addArguments("--disable-infobars");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-    }
+        driver.manage().window().maximize();}
+
     @Test
-    public void checkContext(){
+    public void checkContext() {
         driver.get("https://the-internet.herokuapp.com/context_menu");
         WebElement hotspot = driver.findElement(HOTSPOT_LOCATOR);
 
@@ -50,6 +50,5 @@ public class ContextTest {
     public void close() {
         driver.quit();
     }
-
 }
 

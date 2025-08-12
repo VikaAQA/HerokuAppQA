@@ -31,9 +31,7 @@ public class UploadTest {
         options.addArguments("--disable-infobars");
         driver = new ChromeDriver(options);
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-        driver.manage().window().maximize();
-    }
-
+        driver.manage().window().maximize(); }
     @Test
     public void checkUploadTest() {
         driver.get("https://the-internet.herokuapp.com/upload");
@@ -47,7 +45,6 @@ public class UploadTest {
                 By.id("uploaded-files"), "testfile.txt"));
         Assert.assertEquals(driver.findElement(By.id("uploaded-files")).getText(), "testfile.txt", "Имя файла не совпадает");
     }
-
     @AfterMethod
     public void close() {
         driver.quit();
