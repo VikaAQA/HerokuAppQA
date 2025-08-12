@@ -1,0 +1,5 @@
+iver.findElement(By. xpath("//input[@type='file']" )).
+sendKeys("путь к файлу" );
+driver.findElement(By. cssSelector("Кнопка старта
+загрузки")).click();
+wait.until(ExpectedConditions. invisibilityOf(loader));
